@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Asistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex items-center justify-center bg-slate-300 mx-auto h-screen">
+        <div class="bg-white shadow-lg p-8 rounded-lg">
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-800 text-white font-semibold px-10 rounded-lg border py-2">Assistant</button>
+                <button class="bg-blue-800 text-white font-semibold px-10 rounded-lg border py-2">History</button>
+            </div>
+            <div class="mt-5">
+                <h3 class="font-semibold mb-2 text-xl">Income💰</h3>
+                <input id="income" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+            </div>
+            <div class="flex items-center justify-between gap-6 py-5">
+                <div>
+                    <h3 class="font-semibold mb-2 text-xl">Softwer🧑‍💻</h3>
+                    <input id="softwer" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2 text-xl">Courses📚</h3>
+                    <input id="courses" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                </div>
+            </div>
+            <div class="flex items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-semibold mb-2 text-xl">Internet🛜</h3>
+                    <input id="internet" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2 text-xl">Utility💡</h3>
+                    <input id="utility" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                </div>
+            </div>
+            <button id="calculate" class="bg-blue-800 text-white font-semibold px-10 rounded-lg border py-2 mt-5 w-full">Calculate</button>
+
+            <div class="mt-5">
+                <h3 class="font-semibold mb-2 text-xl">Savings💸(%)</h3>
+                <input id="savings" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                <button id="saving-btn" class="bg-green-800 text-white font-semibold px-10 rounded-lg border py-2 mt-5 w-full">Calculate Savings</button>
+            </div>
+
+            <!-- Result History -->
+            <div id="result-history" class="border border-gray-500 rounded-lg p-5 mt-5 hidden">
+                <h3 class="font-bold text-center mb-4 text-2xl">Result Summary</h3>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="border-l-4 border-blue-600 rounded-xl p-3 shadow-lg">
+                        <h4 class="font-semibold">Total Expenses</h4>
+                        <p class="font-bold">$<span id="total-expense">00</span></p>
+                    </div>
+                    <div class="border-l-4 border-yellow-600 rounded-xl p-3 shadow-lg">
+                        <h4 class="font-semibold">Balance</h4>
+                        <p class="font-bold">$<span id="total-balance">00</span></p>
+                    </div>
+                    <div class="border-l-4 border-red-700 rounded-xl p-3 shadow-lg">
+                        <h4 class="font-semibold">Savings Account</h4>
+                        <p class="font-bold">$<span id="saving-text">00</span></p>
+                    </div>
+                    <div class="border-l-4 border-green-600 rounded-xl p-3 shadow-lg">
+                        <h4 class="font-semibold">Remaining Balance</h4>
+                        <p class="font-bold">$<span id="remaining-balance">00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/expense.js"></script>
+</body>
+</html>
