@@ -36,3 +36,31 @@ document.getElementById('saving-btn').addEventListener('click', function(){
     document.getElementById('saving-text').innerText = savingBalance.toFixed(2);
     document.getElementById('remaining-balance').innerText = (balance - savingBalance).toFixed(2);
 })
+
+
+// access button
+const historyButton = document.getElementById('history-btn')
+const asistantButton = document.getElementById('asistant-btn')
+const historySection = document.getElementById('history-section')
+const asistantSection = document.getElementById('asistant-section')
+const resultSummery = document.getElementById('result-history')
+// history button functionlity
+historyButton.addEventListener('click', function(){
+    
+    historyButton.classList.add('bg-blue-800', 'text-white')
+    asistantButton.classList.remove('bg-blue-800', 'text-white')
+    historySection.classList.remove('hidden')
+    asistantSection.classList.add('hidden')
+    resultSummery.classList.remove('hidden')
+})
+
+// asistant button functionlity
+asistantButton.addEventListener('click', function(){
+    
+    historyButton.classList.remove('bg-blue-800', 'text-white')
+    asistantButton.classList.add('bg-blue-800', 'text-white')
+    historySection.classList.add('hidden')
+    asistantSection.classList.remove('hidden')
+    resultSummery.classList.add('hidden')
+
+})
