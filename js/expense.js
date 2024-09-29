@@ -19,6 +19,20 @@ document.getElementById('calculate').addEventListener('click',function(){
 
     const history = document.getElementById('result-history');
     history.classList.remove('hidden')
+
+    // history functionality
+    const historyCard = document.createElement('div')
+    historyCard.innerHTML = `
+    <div class = "shadow-lg bg-yellow-100 p-4 my-2 border-l-4 rounded-lg border-green-500">
+    <p>Time: ${new Date()}</p>
+    <p class = 'font-semibold text-xl'>Income: $${income}</p> 
+    <p class = 'font-semibold text-xl'>Expense: $${expenses}</p> 
+    <p class = 'font-semibold text-xl'>Income: $${balance}</p>
+    </div>
+    `
+   const list =  document.getElementById('history-tab')
+   list.insertBefore(historyCard, list.firstChild)
+    
 })
 
 document.getElementById('saving-btn').addEventListener('click', function(){
@@ -44,9 +58,9 @@ const asistantButton = document.getElementById('asistant-btn')
 const historySection = document.getElementById('history-section')
 const asistantSection = document.getElementById('asistant-section')
 const resultSummery = document.getElementById('result-history')
+
 // history button functionlity
 historyButton.addEventListener('click', function(){
-    
     historyButton.classList.add('bg-blue-800', 'text-white')
     asistantButton.classList.remove('bg-blue-800', 'text-white')
     historySection.classList.remove('hidden')
@@ -56,11 +70,9 @@ historyButton.addEventListener('click', function(){
 
 // asistant button functionlity
 asistantButton.addEventListener('click', function(){
-    
     historyButton.classList.remove('bg-blue-800', 'text-white')
     asistantButton.classList.add('bg-blue-800', 'text-white')
     historySection.classList.add('hidden')
     asistantSection.classList.remove('hidden')
     resultSummery.classList.add('hidden')
-
 })
