@@ -19,25 +19,30 @@
                     <div>
                         <h3 class="font-semibold mb-2 text-xl">Income💰</h3>
                         <input id="income" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                        <p id="income-error" class="text-red-600 font-semibold hidden">🚫Invalid income</p>
                     </div>
                     <div class="flex items-center justify-between gap-6 py-5">
                         <div>
                             <h3 class="font-semibold mb-2 text-xl">Softwer🧑‍💻</h3>
                             <input id="softwer" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                            <p id="softwer-error" class="text-red-600 font-semibold hidden">🚫Invalid softwer</p>
                         </div>
                         <div>
                             <h3 class="font-semibold mb-2 text-xl">Courses📚</h3>
                             <input id="courses" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                            <p id="courses-error" class="text-red-600 font-semibold hidden">🚫Invalid courses</p>
                         </div>
                     </div>
                     <div class="flex items-center justify-between gap-6">
                         <div>
                             <h3 class="font-semibold mb-2 text-xl">Internet🛜</h3>
                             <input id="internet" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                            <p id="internet-error" class="text-red-600 font-semibold hidden">🚫Invalid internet</p>
                         </div>
                         <div>
                             <h3 class="font-semibold mb-2 text-xl">Utility💡</h3>
                             <input id="utility" class="border w-full px-4 py-2 border-black rounded-sm" type="number" name="">
+                            <p id="utility-error" class="text-red-600 font-semibold hidden">🚫Invalid utility</p>
                         </div>
                     </div>
                     <button id="calculate" class="bg-blue-800 text-white font-semibold px-10 rounded-lg border py-2 mt-5 w-full">Calculate</button>
@@ -79,9 +84,7 @@
                         </div>
                  </div>
             </div>
-
         </div>
-
     </div>
     <script src="js/utilities.js"></script>
     <script src="js/expense.js"></script>

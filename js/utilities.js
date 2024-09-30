@@ -17,3 +17,11 @@ function addClasslist (add, classes){
 function removeClasslist(remove, classes){
     return document.getElementById(remove).classList.remove(classes)
 }
+
+// validation functilily
+function validationById(income, err){
+    if ( income <= 0 || isNaN(income) ){
+        document.getElementById(err).classList.remove('hidden')
+        return;
+    } 
+}

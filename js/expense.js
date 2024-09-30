@@ -26,8 +26,15 @@ document.getElementById('calculate').addEventListener('click',function(){
     <p class = 'font-semibold text-xl'>Balance: $${toCurrency(balance)}</p>
     </div>
     `
-   
-   if ( (income > expenses) && (softwer >= 0 && courses >=0 && utility >=0 && internet >=0 ) ){
+    // validation complete
+    validationById(income, 'income-error')
+    validationById(softwer, 'softwer-error')
+    validationById(internet, 'internet-error')
+    validationById(courses, 'courses-error')
+    validationById(utility, 'utility-error')
+    
+
+   if ( (income > expenses) ){
        totalBalance.innerText = balance.toFixed(2);
        totalExpense.innerText = expenses.toFixed(2);
        history.classList.remove('hidden')
